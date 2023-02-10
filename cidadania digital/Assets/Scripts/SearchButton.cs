@@ -7,18 +7,16 @@ using UnityEngine.EventSystems;
 public class SearchButton : MonoBehaviour, IPointerDownHandler
 {
     // Start is called before the first frame update
-    void Update()
+
+    void Start()
     {
-        // if (Input.GetMouseButtonDown(0))
-        // {
-        //     AnimationHandler_1.Instance.Screen_1_Exit();
-        //     //Debug.Log("FOi");
-        // }
+
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("Foi");
         AnimationHandler_1.Instance.Screen_1_Exit();
+        this.enabled = false;
     }
 }
