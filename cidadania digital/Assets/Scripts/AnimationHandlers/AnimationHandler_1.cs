@@ -69,6 +69,7 @@ public class AnimationHandler_1 : MonoBehaviour
 
         searchButtonImage.transform.DOLocalMoveY(searchButtonImage.transform.localPosition.y + 45f, 1f).SetEase(Ease.InOutQuint);
 
+
         AnimationHandler_2.Instance.Screen_2_Enter();
 
         yield return null;
@@ -79,7 +80,7 @@ public class AnimationHandler_1 : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Debug.Log("heading desativado");
         heading.gameObject.SetActive(false);
-        gameObject.SetActive(false);
+        this.enabled = false;
 
     }
 
