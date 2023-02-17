@@ -18,7 +18,7 @@ public class SearchButton : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         AnimationHandler_1.Instance.Screen_1_Exit();
-        BackgroundAnimationHandler.Instance.To_Screen_2_Transition();
+        // BackgroundAnimationHandler.Instance.To_Screen_2_Transition();
         GameObjectsHandler.Instance.ChangeGameObjectParent(SearchBar, Tela2);
         this.enabled = false;
     }
