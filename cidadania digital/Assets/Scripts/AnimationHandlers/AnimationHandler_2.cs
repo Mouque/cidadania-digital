@@ -26,6 +26,11 @@ public class AnimationHandler_2 : MonoBehaviour
 
     }
 
+    void OnDisable()
+    {
+        Debug.Log("Animation Handler 2 desativado");
+    }
+
     // Update is called once per frame
     public void Screen_2_Enter()
     {

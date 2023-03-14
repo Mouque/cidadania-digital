@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class NextSideBar : MonoBehaviour, IPointerDownHandler
+public class NextSideBar : MonoBehaviour
 {
     public delegate void Transition();
 
     [SerializeField] private static GameObject Tela3;
     [SerializeField] private static GameObject SearchBar;
+
+    [SerializeField] private Button transparentButton;
     [SerializeField] NextSideBar.TransitionName transition;
     public enum TransitionName { ToScreen3 };
 
@@ -30,12 +33,19 @@ public class NextSideBar : MonoBehaviour, IPointerDownHandler
         AnimationHandler_3.Instance.Screen_3_Enter();
     }
 
-
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnButtonClick()
     {
-        // Debug.Log("Foi");
+        transparentButton.interactable = false;
         ExecuteTransition(transition).Invoke();
         StartCoroutine(AnimationHandler_2.Instance.HideNextSideBar());
     }
+
+    void OnDisable()
+    {
+        transparentButton.interactable = true;
+
+    }
+
+
 
 }
