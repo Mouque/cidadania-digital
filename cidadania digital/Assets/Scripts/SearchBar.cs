@@ -14,6 +14,7 @@ public class SearchBar : MonoBehaviour
     {
         AnimationHandler_3.Instance.Screen_3_Exit();
         searchBarTransparentButton.interactable = false;
+        AnimationHandler_4.Instance.Screen_4_Enter();
     }
 
     void Start()

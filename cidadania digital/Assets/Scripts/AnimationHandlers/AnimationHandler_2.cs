@@ -34,14 +34,14 @@ public class AnimationHandler_2 : MonoBehaviour
     // Update is called once per frame
     public void Screen_2_Enter()
     {
-        Debug.Log("Screen 2 Enter");
+        Debug.Log("AnimHandler2 Screen 2 Enter");
         StartCoroutine(EnterAnimation());
 
     }
 
     public void Screen_2_Exit()
     {
-        Debug.Log("Screen 2 Exit");
+        Debug.Log("AnimHandler2 Screen 2 Exit");
         StartCoroutine(ExitAnimation());
         StartCoroutine(DisableGameObjects());
 
@@ -83,7 +83,7 @@ public class AnimationHandler_2 : MonoBehaviour
     IEnumerator DisableGameObjects()
     {
         yield return new WaitForSeconds(2f);
-        Debug.Log("heading desativado");
+        Debug.Log("Screen 2: heading e Nassau image desativados");
         heading.gameObject.SetActive(false);
         nassauResult.gameObject.SetActive(false);
         this.enabled = false;

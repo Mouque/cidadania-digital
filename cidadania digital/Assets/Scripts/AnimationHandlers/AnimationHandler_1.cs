@@ -30,13 +30,13 @@ public class AnimationHandler_1 : MonoBehaviour
 
     public void Screen_1_Enter()
     {
-        Debug.Log("Screen 1 Enter");
+        Debug.Log("AnimHandler1 Screen 1 Enter");
         StartCoroutine(EnterAnimation());
     }
 
     public void Screen_1_Exit()
     {
-        Debug.Log("Screen 1 Exit");
+        Debug.Log("AnimHandler1 Screen 1 Exit");
         StartCoroutine(ExitAnimation());
         StartCoroutine(DisableGameObjects());
     }
@@ -78,7 +78,7 @@ public class AnimationHandler_1 : MonoBehaviour
     IEnumerator DisableGameObjects()
     {
         yield return new WaitForSeconds(2f);
-        Debug.Log("heading desativado");
+        Debug.Log("Screen 1: heading desativado");
         heading.gameObject.SetActive(false);
         this.enabled = false;
 

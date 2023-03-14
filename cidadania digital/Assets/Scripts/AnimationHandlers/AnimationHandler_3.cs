@@ -34,7 +34,7 @@ public class AnimationHandler_3 : MonoBehaviour
 
     public void Screen_3_Enter()
     {
-        Debug.Log("Screen 3 Enter");
+        Debug.Log("AnimHandler3 Screen 3 Enter");
 
         StartCoroutine(EnterAnimation());
 
@@ -47,7 +47,7 @@ public class AnimationHandler_3 : MonoBehaviour
 
     public void Screen_3_Exit()
     {
-        Debug.Log("Screen 3 Exit");
+        Debug.Log("AnimHandler3 Screen 3 Exit");
         StartCoroutine(ExitAnimation());
         StartCoroutine(DisableGameObjects());
 
@@ -81,14 +81,12 @@ public class AnimationHandler_3 : MonoBehaviour
         heading2.DOFade(0f, 1f).SetEase(Ease.InOutQuint);
 
         yield return new WaitForSeconds(1f);
-
-        Debug.Log("Chamar anim_4 screen enter");
     }
 
     IEnumerator DisableGameObjects()
     {
         yield return new WaitForSeconds(2f);
-        Debug.Log("heading 1 e 2 desativados");
+        Debug.Log("Screen 3: heading 1 e 2 desativados");
         heading1.gameObject.SetActive(false);
         heading2.gameObject.SetActive(false);
         this.enabled = false;
